@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% block calc-results %}
+<br>
+<hr>
+<br>
+<table>
+    <legend>还款方案结果</legend>
+    <tr>
+        <td colspan="2">总计还款：</td>
+        <td colspan="2">￥<span class="output" id="total-payment"></span></td>
+    </tr>
+    <tr>
+        <td colspan="2">总利利息：</td>
+        <td colspan="2">￥<span class="output" id="total-interest"></span></td>
+    </tr>
+    <tr>
+        <th>期数</th>
+        <th>月供</th>
+        <th>月供本金</th>
+        <th>月供利息</th>
+    </tr>
+</table>
+<div id="result"></div>  
+   
+{% endblock calc-results %}
+
+

@@ -1,0 +1,48 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    贷款计算器
+{% endblock title %}
+
+{% block interface %}
+    <table >
+        <tr><th>请输入数据：</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td>输入本金</td>
+            <td><input id="principal" ></td>
+            <td rowspan="8">
+                <canvas id="graph" width="400" height="250"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>输入利率</td>
+            <td><input id="rate" ></td>
+        </tr>
+        <tr>
+            <td>输入还款期数：</td>
+            <td><select id="period" >
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12" selected>12</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>输入还款方式：</td>
+            <td><select id="payment-method" >
+                <option value="method1">等额本息</option>
+                <option value="method2">等额本金</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>计算还款方案：</td>
+            <td><button id="clk-btn" click="claculate()">计算</button></td>
+        </tr>
+    </table>
+
+{% endblock interface %}

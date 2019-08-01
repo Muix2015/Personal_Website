@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        
+    {% endblock title %}</title>
+    {# <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"> #}
+</head>
+<body>
+    <div id="clac-interface">
+        {% block interface %}
+            
+        {% endblock interface %}
+    </div>
+    <div id="calc-results">
+        
+        {% block results %}
+        {# {% include "blog/results.html" %}             #}
+        {% endblock results %}
+
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
