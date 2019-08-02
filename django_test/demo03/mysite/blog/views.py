@@ -15,18 +15,18 @@ def index(request):
 
 
 def get_data(request):
-    # response = HttpResponse("server")
-    # response["Access-Control-Allow-Origin"]="*"
-    # return HttpResponse(response)
-    if request.method=="POST":
-        data=request.POST.get('tatalPrincipal')
-        print("ok")
-        status=1
-        result="sucuss"
-        return HttpResponse(json.dumps({
-            "status":status,
-            "result":result,
-            "data":data
-        }))
-    else:
-        return HttpResponse(json_obj)
+    response = HttpResponse("server")
+    response["Access-Control-Allow-Origin"]="*"
+    return HttpResponse(response)
+    # if request.method=="POST":
+    #     data=request.POST.get('tatalPrincipal')
+    #     print("ok")
+    #     status=1
+    #     result="sucuss"
+    #     return HttpResponse(json.dumps({
+    #         "status":status,
+    #         "result":result,
+    #         "data":data
+    #     }))
+    # else:
+    #     return HttpResponse(json_obj)
